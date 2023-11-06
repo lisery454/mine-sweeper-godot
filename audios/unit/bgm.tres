@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dxbfbhnrwtquv"]
+
+[ext_resource type="AudioStream" uid="uid://ld08b1tg3ngx" path="res://audios/raw/Ludum Dare 30 - Track 2.wav" id="1_5kjro"]
+[ext_resource type="Script" path="res://scripts/Global/AudioUnit.cs" id="2_oiql1"]
+
+[resource]
+script = ExtResource("2_oiql1")
+audio = ExtResource("1_5kjro")
+velocity = -30.0

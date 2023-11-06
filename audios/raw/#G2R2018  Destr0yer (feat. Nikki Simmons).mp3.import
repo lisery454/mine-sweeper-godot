@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8yxs4h0ifagj"
+path="res://.godot/imported/#G2R2018  Destr0yer (feat. Nikki Simmons).mp3-87a966eb745d9fcdef8c46aec5c6a210.mp3str"
+
+[deps]
+
+source_file="res://audios/raw/#G2R2018  Destr0yer (feat. Nikki Simmons).mp3"
+dest_files=["res://.godot/imported/#G2R2018  Destr0yer (feat. Nikki Simmons).mp3-87a966eb745d9fcdef8c46aec5c6a210.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

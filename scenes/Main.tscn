@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8s0tpcgcv1qp"]
+
+[ext_resource type="FontFile" uid="uid://bwomlu0hx3vmd" path="res://fonts/pixopedia-2.ttf" id="1_af573"]
+[ext_resource type="Script" path="res://scripts/Main/MineSystem.cs" id="1_e7yoe"]
+[ext_resource type="PackedScene" uid="uid://cs06xmemcnlfb" path="res://prefabs/Grid.tscn" id="2_7q5gx"]
+[ext_resource type="Script" path="res://scripts/Main/Input/InputManager.cs" id="3_y2n5n"]
+[ext_resource type="Script" path="res://scripts/Main/Grid/GridManager.cs" id="4_fu4xo"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("_inputManager", "_gridManager", "_timeLabel")]
+script = ExtResource("1_e7yoe")
+_inputManager = NodePath("InputManager")
+_gridManager = NodePath("GridManager")
+_timeLabel = NodePath("CanvasLayer/Label")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.635294, 0.823529, 0.890196, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -52.0
+offset_right = 209.0
+offset_bottom = -3.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.262745, 0.741176, 0.905882, 1)
+theme_override_fonts/font = ExtResource("1_af573")
+theme_override_font_sizes/font_size = 41
+text = "Time: 0s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("_rayCast2D")]
+script = ExtResource("3_y2n5n")
+_rayCast2D = NodePath("RayCast2D")
+
+[node name="RayCast2D" type="RayCast2D" parent="InputManager"]
+target_position = Vector2(0, 0)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="GridManager" type="Node" parent="."]
+script = ExtResource("4_fu4xo")
+_gridPrefab = ExtResource("2_7q5gx")
+_borderHeight = 100.0
+_borderWidth = 50.0
+_gridDistanceFactor = 0.2

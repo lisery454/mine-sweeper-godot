@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dx4ymwgu0tu5w"]
+
+[ext_resource type="AudioStream" uid="uid://0qoe5dc6sbut" path="res://audios/raw/Cancel 1.wav" id="1_gnxsl"]
+[ext_resource type="Script" path="res://scripts/Global/AudioUnit.cs" id="2_utehi"]
+
+[resource]
+script = ExtResource("2_utehi")
+audio = ExtResource("1_gnxsl")
+velocity = -5.0

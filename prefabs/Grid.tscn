@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://cs06xmemcnlfb"]
+
+[ext_resource type="Texture2D" uid="uid://bre4fqlas58hy" path="res://images/ThemeSea/Mine_normal.png" id="1_4yrr7"]
+[ext_resource type="Script" path="res://scripts/Main/Grid/Grid.cs" id="1_7g6q6"]
+[ext_resource type="Texture2D" uid="uid://qo1pi58txi11" path="res://images/ThemeSea/Mine_highlight.png" id="2_jbgt6"]
+[ext_resource type="Texture2D" uid="uid://4dld8xo1s4cx" path="res://images/ThemeSea/Mine_flag.png" id="3_llww5"]
+[ext_resource type="Texture2D" uid="uid://c6atrksc7oe65" path="res://images/ThemeSea/Mine_back.png" id="4_3eg1p"]
+[ext_resource type="Texture2D" uid="uid://bokdwnmdfehm6" path="res://images/ThemeSea/Mine_mine.png" id="4_sfidd"]
+[ext_resource type="FontFile" uid="uid://bwomlu0hx3vmd" path="res://fonts/pixopedia-2.ttf" id="6_epkkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnjvu"]
+size = Vector2(15.9887, 15.9948)
+
+[node name="Grid" type="Node2D" node_paths=PackedStringArray("_normal", "_highlight", "_flag", "_back", "_mine", "_number")]
+scale = Vector2(3, 3)
+script = ExtResource("1_7g6q6")
+_normal = NodePath("Normal")
+_highlight = NodePath("Highlight")
+_flag = NodePath("Flag")
+_back = NodePath("Back")
+_mine = NodePath("Mine")
+_number = NodePath("Number")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_4yrr7")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("2_jbgt6")
+
+[node name="Flag" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_llww5")
+
+[node name="Back" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_3eg1p")
+
+[node name="Mine" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_sfidd")
+
+[node name="Number" type="Label" parent="."]
+offset_left = -6.90866
+offset_top = -3.9536
+offset_right = 108.091
+offset_bottom = 116.046
+scale = Vector2(0.105, 0.105)
+theme_override_colors/font_color = Color(0.184314, 0.384314, 0.564706, 1)
+theme_override_fonts/font = ExtResource("6_epkkl")
+theme_override_font_sizes/font_size = 116
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.00566196, -0.00258446)
+shape = SubResource("RectangleShape2D_gnjvu")

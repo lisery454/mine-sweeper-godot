@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://4lfgjvt2ao1c"]
+
+[ext_resource type="AudioStream" uid="uid://dqdgbon331wuh" path="res://audios/raw/Fail.mp3" id="1_1h1dt"]
+[ext_resource type="Script" path="res://scripts/Global/AudioUnit.cs" id="2_kt71a"]
+
+[resource]
+script = ExtResource("2_kt71a")
+audio = ExtResource("1_1h1dt")
+velocity = -20.0

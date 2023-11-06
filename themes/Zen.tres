@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=10 format=3 uid="uid://nov855hdvr8b"]
+
+[ext_resource type="Texture2D" uid="uid://diqplvym4w4a1" path="res://images/ThemeZen/UI_1.png" id="1_7e4na"]
+[ext_resource type="Texture2D" uid="uid://c66h4a76so8c6" path="res://images/ThemeZen/UI_0.png" id="2_0xvac"]
+[ext_resource type="Texture2D" uid="uid://cl2diwwvpioub" path="res://images/ThemeZen/Mine_back.png" id="3_5wfog"]
+[ext_resource type="Texture2D" uid="uid://c8xo6tu0qs3d8" path="res://images/ThemeZen/Mine_flag.png" id="4_4rwls"]
+[ext_resource type="Texture2D" uid="uid://dmy7n38tykyya" path="res://images/ThemeZen/Mine_highlight.png" id="5_j4na8"]
+[ext_resource type="Texture2D" uid="uid://cyjrp7kextb6v" path="res://images/ThemeZen/Mine_mine.png" id="6_s51kx"]
+[ext_resource type="Texture2D" uid="uid://ctsn0cm14xd5b" path="res://images/ThemeZen/Mine_normal.png" id="7_mvhy2"]
+[ext_resource type="Texture2D" uid="uid://sgwmt4cg0g4x" path="res://images/ThemeZen/SceneLoad.png" id="8_g6pkj"]
+[ext_resource type="Script" path="res://scripts/Global/ThemeUnit.cs" id="9_3xjxk"]
+
+[resource]
+script = ExtResource("9_3xjxk")
+BackColor = Color(0.819608, 0.819608, 0.819608, 1)
+FrontColor = Color(0.490196, 0.490196, 0.490196, 1)
+FontColor = Color(0.270588, 0.270588, 0.270588, 1)
+ButtonTex = ExtResource("2_0xvac")
+ButtonDownTex = ExtResource("1_7e4na")
+MineMineTex = ExtResource("6_s51kx")
+MineBackTex = ExtResource("3_5wfog")
+MineFlagTex = ExtResource("4_4rwls")
+MineHighlightTex = ExtResource("5_j4na8")
+MineNormalTex = ExtResource("7_mvhy2")
+SceneLoadTex = ExtResource("8_g6pkj")
